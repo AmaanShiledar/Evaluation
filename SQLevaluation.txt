@@ -1,0 +1,64 @@
+Q. Car and Owner detail based on car typr
+
+select car_id, car_name, owner_id from cars where car_type IN ('SUV');
+
++--------+----------+----------+
+| car_id | car_name | owner_id |
++--------+----------+----------+
+| 1      | Bmw X7   | 1        |
+| 3      | Innova   | 3        |
++--------+----------+----------+
+
+
+Q. Car details based on type and name 
+
+SELECT car_id, car_name, car_type from cars WHERE car_type='Sedan' ORDER BY 'car_id' ASC;
+
++--------+---------------+----------+
+| car_id | car_name      | car_type |
++--------+---------------+----------+
+| 2      | Skoda Superb  | Sedan    |
+| 4      | Accord        | Sedan    |
+| 5      | Maruthi Swift | Sedan    |
++--------+---------------+----------+
+
+
+Q. Customer mail Details 
+
+SELECT CONCAT (customer_id, ' ', 'mail address is ',email_id)AS CUSTOMER_MAIL_INFO from customers;
+
++------------------------------------+
+| CUSTOMER_MAIL_INFO                 |
++------------------------------------+
+| 1 mail address is pratik@gmail.com |
+| 2 mail address is tom@gmail.com    |
+| 3 mail address is sruti@gmail.com  |
+| 4 mail address is akash@gmail.com  |
++------------------------------------+
+
+
+Q. Customer having Gmail id 
+
+select customer_id, customer_name, address, phone_no from customers where email_id LIKE'%gmail.com';
+
++-------------+---------------+----------+------------+
+| customer_id | customer_name | address  | phone_no   |
++-------------+---------------+----------+------------+
+| 1           | Pratik        | Pune     | 9889314478 |
+| 2           | Tom           | Mumbai   | 7980214745 |
+| 3           | Sruti         | Nagpur   | 9010214703 |
+| 4           | Akash         | Nasik    | 9800214123 |
++-------------+---------------+----------+------------+
+
+
+Q. Delivery partner details based on rating
+
+SELECT partner_id, partner_name, phone_no FROM delivery_partners WHERE rating BETWEEN 3 AND 5 ORDER BY partner_id ASC;
+
++------------+--------------+-----------+
+| partner_id | partner_name | phone_no  |
++------------+--------------+-----------+
+| 1          | Pratik       | 901020090 |
+| 2          | Tom          | 941410090 |
+| 3          | Akash        | 787410090 |
++------------+--------------+-----------+
